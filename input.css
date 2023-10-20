@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+    @apply hover:text-orange-400
+}
+.nav-links {
+    @apply hover:text-orange-400 ml-4 text-lg font-bold
+}
+.own-text {
+    @apply text-white hover:text-[#f2b259] text-lg font-semibold
+}
+.own-texts {
+    @apply text-black hover:text-[#f2b259] text-lg font-semibold
+}
+
+
+.ham {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    position: relative;
+    transition: all 0.25;
+}
+
+.ham-ber, .ham-ger, .ham-ber-ger {
+    height:2px;
+    width: 24px;
+    background: #000;
+    position: absolute;
+    transition: all 0.5s;
+    right: 0;
+    top: 0;
+}
+
+.ham-ger {
+    transform: translateY(7px);
+}
+.ham-ber-ger {
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+    
+}
+
+.open .ham-ber {
+    transform: rotate(45deg) translateY(6px) translateX(6px) ;
+   
+}
+
+.open .ham-ger {
+    display: none;
+}
+
+.open .ham-ber-ger {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    
+}
